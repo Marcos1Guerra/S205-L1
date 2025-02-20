@@ -1,3 +1,78 @@
-h2{
-  color: black;
+.container {
+  color: #1b1b1b;
+  width: 500px;
+  height: 250px;
+  position: relative;
+  outline: 6px solid #9c57f0;
+  background: #1111116e;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  justify-items: center;
+  justify-self: center;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+select{
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button{
+  background-color: #9c57f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+button:hover{
+  background-color: #4e4f51;
+  color: #fff;
+}
+
+#resultado{
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+label{
+  font-size: 18px;
+}
+
+h2,
+p,
+label {
+  color: #fff;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  height: 100%;
+  --s: 200px;
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
