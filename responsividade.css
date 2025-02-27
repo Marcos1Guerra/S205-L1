@@ -1,0 +1,97 @@
+header{
+  background-color: #FCF0BD;
+}
+
+.flexBoxHeader {
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-auto-flow: column;
+  gap: 3%;
+  height: 10%;
+}
+
+.flexBoxHeader_item {
+  background-color: #cef6c2;
+  align-content: end;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+}
+
+.flexBoxHeader_item:nth-child(11n + 2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.mensagens {
+  background-color: #c7addf;
+  padding: 16px;
+  height: 20%;
+}
+.mensagens h2 {
+  margin-bottom: 20px;
+}
+
+.flexBoxMensagem {
+  display: flex;
+  gap: 3%;
+}
+
+.aulas {
+  background-color: #9df8c0;
+  padding: 16px;
+  height: 30%;
+}
+
+.flexBoxDisciplina {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3%;
+}
+
+.noticias {
+  background-color: #cebaba;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+  height: 30%;
+}
+
+p,
+h2 {
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@media screen and (max-width: 425px) {
+  .boxMensagens {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .mensagens,
+  .aulas,
+  .noticias,
+  header {
+    height: auto;
+  }
+
+  p,
+  h2 {
+    text-align: left;
+  }
+}
