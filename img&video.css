@@ -1,0 +1,204 @@
+:root {
+  --header-color: #015294;
+  --mensagens-color: #015eab;
+  --aulas-color: #007ce1;
+  --noticias-color: #0199d9;
+  --text-color: #fff;
+  --symbols-color: #fff;
+  --svg-color: #fff;
+}
+
+.dark-theme {
+  --header-color: #121f4d;
+  --mensagens-color: #0c054d;
+  --aulas-color: #00004d;
+  --noticias-color: #24054d;
+  --text-color: #fff;
+  --symbols-color: #fff;
+  --svg-color: #fff;
+}
+
+.material-symbols-outlined {
+  color: var(--symbols-color);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+header {
+  background-color: var(--header-color);
+  height: 10%;
+}
+
+.flexBoxHeader {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3%;
+}
+
+.flexBoxHeader_item {
+  align-content: end;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+}
+
+.flexBoxHeader_item svg {
+  max-width: 100px;
+  fill: var(--svg-color);
+}
+
+.flexBoxHeader_item:nth-child(11n + 2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.mensagens {
+  background-color: var(--mensagens-color);
+  padding: 16px;
+  height: 20%;
+}
+.mensagens h2 {
+  margin-bottom: 20px;
+}
+
+.flexBoxMensagem {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+
+.aulas {
+  background-color: var(--aulas-color);
+  padding: 16px;
+  height: 35%;
+}
+
+.flexBoxDisciplina {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3%;
+}
+
+.noticias {
+  background-color: var(--noticias-color);
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+  height: 35%;
+}
+
+p,
+h2 {
+  margin: 10px 10px 10px 10px;
+  text-align: justify;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 425px) {
+  .boxMensagens {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .mensagens,
+  .aulas,
+  .noticias,
+  header {
+    height: auto;
+  }
+
+  p,
+  h2 {
+    text-align: left;
+  }
+}
+
+h3 {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  color: var(--cor-text);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--cor-text);
+  line-height: 1.5;
+  orphans: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  display: realtive; /* mudaremos para flex posteriormente */
+}
+
+.card {
+  min-width: 100%;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.info {
+  padding: 16px;
+}
+
+.icon {
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 2px;
+  width: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+#prevBtn {
+  left: 10px;
+}
+#nextBtn {
+  right: 10px;
+}
