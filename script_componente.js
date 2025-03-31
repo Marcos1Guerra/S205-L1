@@ -35,7 +35,7 @@ class AulasComponent extends HTMLElement {
           let corNota = "black";
           if(a.nota >= 8){
             corNota = "green";
-          } else if(6 >= a.nota > 8){
+          } else if(6 >= a.nota){
             corNota = "orange";
           } else{
             corNota = "red";
