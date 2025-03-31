@@ -28,9 +28,19 @@ class AulasComponent extends HTMLElement {
     this.shadowRoot.appendChild(link); 
 
     this.shadowRoot.innerHTML += `
-      <div class="aulaPrincipal">
+      <div class="aula-Principal">
         ${aulasDia.map(a => {
           let provaDisplay = a.prova_alert ? '' : 'display: none;';
+
+          let corNota = "black";
+          if(a.nota >= 8){
+            corNota = "green";
+          } else if(6 >= a.nota > 8){
+            corNota = "orange";
+          } else{
+            corNota = "red";
+          }
+
           return `
             <div class="comp-aula">
               <div class="lable-prova p_lable" style="${provaDisplay}">PROVA: <b>${a.prova}</b></div>
@@ -38,7 +48,7 @@ class AulasComponent extends HTMLElement {
               <p class="p">Local e Horário: <b>${a.local} - ${a.horario}</b></p>
               <div class="lables">
                 <div class="lable-frequencia p_lable">FALTAS: <b>${a.frequencia}</b></div>
-                <div class="lable-nota p_lable">CR: <b>${a.nota}</b></div>
+                <div class="lable-nota p_lable" style="background-color: ${corNota}">CR: <b>${a.nota}</b></div>
               </div>
             </div>
           `;
