@@ -31,6 +31,12 @@ class AulasComponent extends HTMLElement {
       <div class="aula-Principal">
         ${aulasDia.map(a => {
           let provaDisplay = a.prova_alert ? '' : 'display: none;';
+
+          let valorNota = a.nota;
+          if(valorNota >= 8){
+            valorNota.style.color = "red";
+          }
+
           return `
             <div class="comp-aula">
               <div class="lable-prova p_lable" style="${provaDisplay}">PROVA: <b>${a.prova}</b></div>
@@ -38,7 +44,7 @@ class AulasComponent extends HTMLElement {
               <p class="p">Local e Horário: <b>${a.local} - ${a.horario}</b></p>
               <div class="lables">
                 <div class="lable-frequencia p_lable">FALTAS: <b>${a.frequencia}</b></div>
-                <div class="lable-nota p_lable">CR: <b>${a.nota}</b></div>
+                <div class="lable-nota p_lable">CR: <b>${valorNota}</b></div>
               </div>
             </div>
           `;
