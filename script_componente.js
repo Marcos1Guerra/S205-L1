@@ -28,7 +28,7 @@ class AulasComponent extends HTMLElement {
     this.shadowRoot.appendChild(link); 
 
     this.shadowRoot.innerHTML += `
-      <div>
+      <div class="aula-Principal">
         ${aulasDia.map(a => {
           let provaDisplay = a.prova_alert ? '' : 'display: none;';
           return `

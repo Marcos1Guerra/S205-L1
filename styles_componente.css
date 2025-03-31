@@ -37,3 +37,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.aula-Principal{
+  padding: 16px;
+}

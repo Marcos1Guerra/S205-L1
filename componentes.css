@@ -68,7 +68,6 @@ header {
 .mensagens {
   background-color: var(--mensagens-color);
   padding: 16px;
-  height: 20%;
 }
 
 .flexBoxMensagem {
